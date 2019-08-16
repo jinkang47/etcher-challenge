@@ -1,15 +1,29 @@
 // Add Event Listeners here:
 
+function handleHover() {
+
+  $('.cell').hover(function(event) {
+        $(event.currentTarget).addClass('active');
+  });
+
+}
+
+function handleClickRedraw() {
+
+  $('.cell').removeClass('active');
+
+}
+
 
 // When DOM is ready:
 $(() => {
   createAndPlaceRows(8);
 
   // Bind your event listeners here:
+  $(handleHover());
+  $(".controls button").click(handleClickRedraw);
+
 });
-
-
-
 
 
 
